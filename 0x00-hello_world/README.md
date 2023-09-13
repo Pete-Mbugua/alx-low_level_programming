@@ -1,1 +1,1 @@
-This repo contains my intro to C, Hello World using Betty style.
+This repository contains my intro to C, Hello World using Betty style.
