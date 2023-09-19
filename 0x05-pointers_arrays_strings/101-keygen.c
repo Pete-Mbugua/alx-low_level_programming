@@ -23,15 +23,15 @@ int main(void)
 
         if (randomCharType == 0)
         {
-            password[i] = rand() % 10 + '0'; // Random digit (0-9)
+            password[i] = rand() % 10 + '0';
         }
         else if (randomCharType == 1)
         {
-            password[i] = rand() % 26 + 'a'; // Random lowercase letter (a-z)
+            password[i] = rand() % 26 + 'a';
         }
         else
         {
-            password[i] = rand() % 26 + 'A'; // Random uppercase letter (A-Z)
+            password[i] = rand() % 26 + 'A';
         }
     }
 
