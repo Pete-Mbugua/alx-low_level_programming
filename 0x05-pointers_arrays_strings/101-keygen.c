@@ -3,7 +3,6 @@
 #include <time.h>
 
 #define PASSWORD_LENGTH 10
-#define CHARACTER_SET "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 /**
  * main - entry point generates a random password
@@ -20,8 +19,20 @@ int main(void)
 
     for (i = 0; i < PASSWORD_LENGTH; i++)
     {
-        int index = rand() % (sizeof(CHARACTER_SET) - 1);
-        password[i] = CHARACTER_SET[index];
+        int randomCharType = rand() % 3;
+
+        if (randomCharType == 0)
+        {
+            password[i] = rand() % 10 + '0'; // Random digit (0-9)
+        }
+        else if (randomCharType == 1)
+        {
+            password[i] = rand() % 26 + 'a'; // Random lowercase letter (a-z)
+        }
+        else
+        {
+            password[i] = rand() % 26 + 'A'; // Random uppercase letter (A-Z)
+        }
     }
 
     password[PASSWORD_LENGTH] = '\0';
